@@ -1,0 +1,9 @@
+#summary_p1, #summary_p2{
+    width: 30vw;
+    height: 10vh;
+}
+
+#myConfirm, #myPrompt1, #myPrompt2{
+    display: none;
+    width: 50%; 
+  } 

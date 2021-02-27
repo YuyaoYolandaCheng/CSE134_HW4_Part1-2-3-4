@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.6/purify.js"></script>
+<title>CSE 134 HW4</title>
+</head>
+
+<body>
+    <h1>Simple Dialogs?</h1>
+    <button id = "alert">Alert</button>
+    <button id = "confirm">Confirm</button>
+    <button id = "prompt">Prompt</button>
+    <button id = "safe">Safer Prompt</button>
+    <br>
+    <output id="out"></output>
+</body>
+
+<script>
+    document.getElementById("alert").addEventListener("click", () => {
+        alert("Here is an alert")
+    });
+
+    document.getElementById("confirm").addEventListener("click", function() {
+        if (confirm("Do you confirm this?")) {
+            txt = "Confirm result: true";
+        } else {
+            txt = "Confirm result: false";
+        }
+        document.getElementById("out").innerHTML = txt;
+    });
+
+    document.getElementById("prompt").addEventListener("click", function() {
+        var person = prompt("What is your name?");
+
+        if (person == null || person == "") {
+            txt = "User didn’t enter anything.";
+        } else {
+            txt = `Prompt result: ${person}`;
+        }
+        document.getElementById("out").innerHTML = txt;
+    });
+
+    document.getElementById("safe").addEventListener("click", function() {
+        var person = prompt("What is your name?");
+
+        if (person == null || person == "") {
+            txt = "User didn’t enter anything.";
+        } else {
+            txt = "Prompt result:  " + person;
+        }
+       let clean = DOMPurify.sanitize(txt);
+       document.getElementById("out").innerHTML = clean;
+    });
+</script>
+</html>

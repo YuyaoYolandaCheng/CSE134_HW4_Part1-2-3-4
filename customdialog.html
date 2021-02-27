@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.6/purify.js"></script>
+    <title>Document</title>
+<style>
+  body {font-family: Arial, Helvetica, sans-serif;}
+
+  #myAlert, #myConfirm, #myPrompt{
+    display: none;
+    width: 50%; 
+  } 
+
+  .modalContentAlert, .modelContentConfirm, .myPrompt {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+  }
+</style>
+</head>
+
+<body>
+<h1>Custom Dialog</h1>
+
+<button id = "alert">Alert</button>
+<button id = "confirm">Confirm</button>
+<button id = "prompt">Prompt</button>
+<br>
+<output id = "out"></output>
+
+<div id="myAlert">
+  <dialog open class="modalContentAlert">
+    Alert Pressed!
+    <button id="close">Ok</button>
+  </dialog>
+</div>
+
+<div id="myConfirm">
+<dialog open class="modalContentConfirm">
+    Do you confirm this?
+    <button id = "ok_c">Ok</button>
+    <button id = "cancel_c">Cancel</button>
+  </dialog>
+</div>
+
+<div id="myPrompt">
+  <dialog open class="modalContentPrompt">
+      What is your name? <br>
+      <input type = "text" id = "name"><br>
+      <button id = "ok_p">Ok</button>
+      <button id = "cancel_p">Cancel</button>
+    </dialog>
+  </div>
+
+<script type = "text/javascript" src = "customdialog.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+h1{
+    font-family: 'Akaya Telivigala', cursive;
+    background-color: rgb(241, 200, 111); 
+    color: white;
+    text-align: center;
+}
+
+#crudlist {
+    font-family: 'Akaya Telivigala', cursive;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 3vw;
+}
+
+td, th{
+    text-align: center;
+    border: 2px solid rgb(241, 200, 111);
+    padding: 10px;
+  }
+
+tr:nth-child(even){
+    background-color: rgb(128, 171, 177);
+}
+
+tr:hover {
+    background-color: linen;
+}
+
+th, dialog{
+    font-family: 'Akaya Telivigala', cursive;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: rgb(241, 200, 111);
+    color: white;
+}
+
+input, textarea{
+    font-family: 'Akaya Telivigala', cursive;
+    color: rgb(128, 171, 177);
+    border: solid 1px rgb(128, 171, 177);
+}
+
+#add {
+    font-size: 5vw;
+    font-family: 'Akaya Telivigala', cursive;
+    background-color: rgb(241, 200, 111); /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button{
+    font-size: 3vw;
+    font-family: 'Akaya Telivigala', cursive;
+    background-color: rgb(241, 200, 111); /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: rgb(128, 171, 177);
+}
+
+#summary_p1, #summary_p2{
+    width: 30vw;
+    height: 10vh;
+}
+
+#myConfirm, #myPrompt1, #myPrompt2{
+    display: none;
+    width: 50%; 
+  } 
